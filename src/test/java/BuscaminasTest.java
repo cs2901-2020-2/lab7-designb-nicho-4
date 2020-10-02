@@ -4,11 +4,25 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 @Test
 public class BuscaminasTest {
+    @Test
+    public void testcaseprueba(){
+        int size=3;
+        buscaminas prueba=new buscaminas(size);
+        while (!prueba.stadojugador){
+            Random rand = new Random();
+            int rand_x=rand.nextInt(size);
+            int rand_y=rand.nextInt(size);
+            prueba.escoger_casilla(rand_x,rand_y);
+        }
 
+
+    }
     public void testCase0() throws IOException {
         generic(0);
     }

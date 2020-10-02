@@ -5,29 +5,34 @@ import java.util.logging.Logger;
 public class buscaminas {
 
     static final Logger logger = Logger.getLogger(buscaminas.class.getName());
+    //tablero de booleanos
+    public static boolean [][] tablaminada;
+    public boolean [][] vistapantalla;
+    public static int tamano;
+    //un booleano que determina el estado del jugador
+    public boolean stadojugador=false;
 
-    public int [][] tabla;
-    public int tamano;
-    public int coordx, coordy;
-
-    public buscaminas(int n){
-        tabla = new int[n][n];
-        for (int i = 0; i < n; i++){
-            for (int j = 0; j < n; j++){
-                tabla[i][j] = 0;
+    public buscaminas(int tam){
+        tamano =tam;
+        tablaminada = new boolean[tam][tam];
+        vistapantalla = new boolean[tam][tam];
+        for (int i = 0; i < tam; i++){
+            for (int j = 0; j < tam; j++){
+                tablaminada[i][j] = false;
+                vistapantalla[i][j]=false;
             }
         }
-        set_minas(tabla, n);
+        set_minas(tablaminada,tam);
     }
 
-    public static void set_minas(int[][] tabla, int n){
+    public static void set_minas(boolean[][] tabla, int n){
         Random rand = new Random();
-        int cant_minas = rand.nextInt(n+1);
+        int cant_minas = rand.nextInt(n*2);
         int rand_x = rand.nextInt(n);
         int rand_y = rand.nextInt(n);
         for (int i = 0; i < cant_minas; i++){
-            if (tabla[rand_x][rand_y] == 0) {
-                tabla[rand_x][rand_y] = 1;
+            if (!(tabla[rand_x][rand_y])) {
+                tabla[rand_x][rand_y] = true;
             }
             else {
                 rand_x = rand.nextInt(n);
@@ -35,49 +40,37 @@ public class buscaminas {
                 i--;
             }
         }
-        escoger_casilla(tabla, n);
     }
 
-    /*
-    public static void imprimirtabla(int [][] tabla,String[][] tablajuego, int n){
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < n; j++){
-                logger.info(tablajuego[i][j]);
+
+    public void print(boolean[][] tablajuego){
+        for(int i = 0; i < tamano; i++){
+            for(int j = 0; j < tamano; j++){
+                logger.info(String.valueOf(tablajuego[i][j]));
             }
             logger.info("\n");
         }
     }
-     */
-
-    public static void escoger_casilla(int[][] tabla, int n, int coordx, int coordy){
-        logger.info("Ingresa coordenadas en x: ");
-        Scanner value_x= new Scanner(System.in);
-        logger.info("Ingresa coordenadas en y: ");
-        Scanner value_y= new Scanner(System.in);
-        int x = value_x.nextInt();
-        int y = value_y.nextInt();
-
-        while (x >= n || y >= n){
+    public void escoger_casilla(int pos_x, int pos_y){
+        //print(vistapantalla);
+        while (pos_x >= tamano || pos_y >= tamano){
             logger.info("Ingresa coordenadas validas: ");
             Scanner val_xn= new Scanner(System.in);
             Scanner val_yn= new Scanner(System.in);
-            x = val_xn.nextInt();
-            y = val_yn.nextInt();
+            pos_x = val_xn.nextInt();
+            pos_y = val_yn.nextInt();
         }
-
-        if (tabla[x][y] == 0){
-            //tablajuego[x][y] = "x";
-            //imprimirtabla(tabla, tablajuego,n);
-            escoger_casilla(tabla, n);
-        } else {
-            logger.info("Perdiste");
-            //imprimirtabla(tabla, tablajuego, n);
+        //logger.info("coordenadas seleccionadas:");
+        //logger.info(String.valueOf(pos_x));
+        //logger.info(String.valueOf(pos_y));
+        if (tablaminada[pos_x][pos_y]){
+            logger.info("Posicion seleccionada minada, usted perdio");
+            stadojugador=true;
+            //print(tablaminada);
         }
-    }
-
-    public void play(){
-
+        else{
+            logger.info("continue jugando");
+        }
     }
 
 }
-
