@@ -53,13 +53,13 @@ public class buscaminas {
 
     public void escoger_casilla(int pos_x, int pos_y){
         //print(vistapantalla);
-        while (pos_x >= tamano || pos_y >= tamano){
-            logger.info("Ingresa coordenadas validas: ");
-            Scanner val_xn= new Scanner(System.in);
-            Scanner val_yn= new Scanner(System.in);
-            pos_x = val_xn.nextInt();
-            pos_y = val_yn.nextInt();
-        }
+//        while (pos_x >= tamano || pos_y >= tamano){
+//            logger.info("Ingresa coordenadas validas: ");
+//            Scanner val_xn= new Scanner(System.in);
+//            Scanner val_yn= new Scanner(System.in);
+//            pos_x = val_xn.nextInt();
+//            pos_y = val_yn.nextInt();
+//        }
         //logger.info("coordenadas seleccionadas:");
         //logger.info(String.valueOf(pos_x));
         //logger.info(String.valueOf(pos_y));
