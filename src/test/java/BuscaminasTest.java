@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -20,8 +21,22 @@ public class BuscaminasTest {
             int rand_y=rand.nextInt(size);
             prueba.escoger_casilla(rand_x,rand_y);
         }
+    }
 
-
+    @Test(invocationCount = 2, threadPoolSize = 2)
+    public void testTime() throws Exception {
+        long startTime = System.currentTimeMillis();
+        int size=3;
+        buscaminas prueba=new buscaminas(size);
+        while (!prueba.stadojugador){
+            Random rand = new Random();
+            int rand_x=rand.nextInt(size);
+            int rand_y=rand.nextInt(size);
+            prueba.escoger_casilla(rand_x,rand_y);
+        }
+        long endTime = System.currentTimeMillis();
+        long time = endTime - startTime;
+        Assert.assertTrue(time <= 400);
     }
 
     private void generic(int i) throws IOException {
