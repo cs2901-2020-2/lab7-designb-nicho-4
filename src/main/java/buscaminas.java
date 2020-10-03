@@ -5,11 +5,9 @@ import java.util.logging.Logger;
 public class buscaminas {
 
     static final Logger logger = Logger.getLogger(buscaminas.class.getName());
-    //tablero de booleanos
     public static boolean [][] tablaminada;
     public boolean [][] vistapantalla;
     public static int tamano;
-    //un booleano que determina el estado del jugador
     public boolean stadojugador=false;
 
     public buscaminas(int tam){
@@ -43,7 +41,6 @@ public class buscaminas {
     }
 
     public void escoger_casilla(int pos_x, int pos_y){
-        //print(vistapantalla);
         while (pos_x >= tamano || pos_y >= tamano){
             logger.info("Ingresa coordenadas validas: ");
             Scanner val_xn= new Scanner(System.in);
@@ -51,13 +48,9 @@ public class buscaminas {
             pos_x = val_xn.nextInt();
             pos_y = val_yn.nextInt();
         }
-        //logger.info("coordenadas seleccionadas:");
-        //logger.info(String.valueOf(pos_x));
-        //logger.info(String.valueOf(pos_y));
         if (tablaminada[pos_x][pos_y]){
-            logger.info("Posicion seleccionada minada, usted perdio");
             stadojugador=true;
-            //print(tablaminada);
+            logger.info("Posicion seleccionada minada, usted perdio");
         }
         else{
             logger.info("continue jugando");
