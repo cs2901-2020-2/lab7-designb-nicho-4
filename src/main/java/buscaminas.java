@@ -42,15 +42,15 @@ public class buscaminas {
         }
     }
 
+//    public void print(boolean[][] tablajuego){
+//        for(int i = 0; i < tamano; i++){
+//            for(int j = 0; j < tamano; j++){
+//                logger.info(String.valueOf(tablajuego[i][j]));
+//            }
+//            logger.info("\n");
+//        }
+//    }
 
-    public void print(boolean[][] tablajuego){
-        for(int i = 0; i < tamano; i++){
-            for(int j = 0; j < tamano; j++){
-                logger.info(String.valueOf(tablajuego[i][j]));
-            }
-            logger.info("\n");
-        }
-    }
     public void escoger_casilla(int pos_x, int pos_y){
         //print(vistapantalla);
         while (pos_x >= tamano || pos_y >= tamano){

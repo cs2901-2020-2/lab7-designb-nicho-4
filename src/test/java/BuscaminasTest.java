@@ -23,19 +23,6 @@ public class BuscaminasTest {
 
 
     }
-    public void testCase0() throws IOException {
-        generic(0);
-    }
-
-    public void testCase1() throws IOException {
-        generic(1);
-    }
-    public void testCase2() throws IOException {
-        generic(2);
-    }
-    public void testCase3() throws IOException {
-        generic(3);
-    }
 
     private void generic(int i) throws IOException {
         int n = readInput(i);

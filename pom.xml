@@ -11,8 +11,9 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <sonar.projectKey>cs2901-2020-2_02b-buscaminas-team1234</sonar.projectKey>
+        <sonar.projectKey>cs2901-2020-2_lab7-designb-nicho-4</sonar.projectKey>
         <sonar.organization>cs2901-2020-2</sonar.organization>
+        <sonar.login>0018c77a978d582ef5dbc51a7bddd87df2dfe47a</sonar.login>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
