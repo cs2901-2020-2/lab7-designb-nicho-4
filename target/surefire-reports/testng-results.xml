@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="BuscaminasTest" duration-ms="50" started-at="2020-10-01T09:08:23 COT" finished-at="2020-10-01T09:08:23 COT">
+  <suite name="Surefire suite" duration-ms="73" started-at="2020-10-03T18:04:31 COT" finished-at="2020-10-03T18:04:31 COT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="50" started-at="2020-10-01T09:08:23 COT" finished-at="2020-10-01T09:08:23 COT">
+    <test name="Surefire test" duration-ms="73" started-at="2020-10-03T18:04:31 COT" finished-at="2020-10-03T18:04:31 COT">
       <class name="BuscaminasTest">
-        <test-method status="PASS" signature="testCase0()[pri:0, instance:BuscaminasTest@6fb554cc]" name="testCase0" duration-ms="17" started-at="2020-10-01T09:08:23 COT" finished-at="2020-10-01T09:08:23 COT">
+        <test-method status="PASS" signature="testTime()[pri:0, instance:BuscaminasTest@4cbf4f53]" name="testTime" duration-ms="24" started-at="2020-10-03T18:04:31 COT" finished-at="2020-10-03T18:04:31 COT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase0 -->
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:BuscaminasTest@6fb554cc]" name="testCase1" duration-ms="2" started-at="2020-10-01T09:08:23 COT" finished-at="2020-10-01T09:08:23 COT">
+        </test-method> <!-- testTime -->
+        <test-method status="PASS" signature="testTime()[pri:0, instance:BuscaminasTest@4cbf4f53]" name="testTime" duration-ms="24" started-at="2020-10-03T18:04:31 COT" finished-at="2020-10-03T18:04:31 COT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="testCase2()[pri:0, instance:BuscaminasTest@6fb554cc]" name="testCase2" duration-ms="1" started-at="2020-10-01T09:08:23 COT" finished-at="2020-10-01T09:08:23 COT">
+        </test-method> <!-- testTime -->
+        <test-method status="PASS" signature="testcaseprueba()[pri:0, instance:BuscaminasTest@4cbf4f53]" name="testcaseprueba" duration-ms="0" started-at="2020-10-03T18:04:31 COT" finished-at="2020-10-03T18:04:31 COT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase2 -->
-        <test-method status="PASS" signature="testCase3()[pri:0, instance:BuscaminasTest@6fb554cc]" name="testCase3" duration-ms="3" started-at="2020-10-01T09:08:23 COT" finished-at="2020-10-01T09:08:23 COT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCase3 -->
+        </test-method> <!-- testcaseprueba -->
       </class> <!-- BuscaminasTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- BuscaminasTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
