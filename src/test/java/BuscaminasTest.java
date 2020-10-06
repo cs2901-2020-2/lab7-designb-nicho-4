@@ -13,7 +13,7 @@ public class BuscaminasTest {
             Random rand = new Random();
             int rand_x=rand.nextInt(size);
             int rand_y=rand.nextInt(size);
-            prueba.escoger_casilla(rand_x,rand_y);
+            prueba.escogerCasilla(rand_x,rand_y);
         }
     }
 
@@ -26,7 +26,7 @@ public class BuscaminasTest {
             Random rand = new Random();
             int rand_x=rand.nextInt(size);
             int rand_y=rand.nextInt(size);
-            prueba.escoger_casilla(rand_x,rand_y);
+            prueba.escogerCasilla(rand_x,rand_y);
         }
         long endTime = System.currentTimeMillis();
         long time = endTime - startTime;

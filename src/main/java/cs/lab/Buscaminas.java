@@ -29,30 +29,30 @@ public class Buscaminas {
     }
 
     public static void set_minas(boolean[][] tabla, int n, Random rand){
-        int cant_minas = rand.nextInt(n*2);
-        int rand_x = rand.nextInt(n);
-        int rand_y = rand.nextInt(n);
-        for (int i = 0; i < cant_minas; i++){
-            if (!(tabla[rand_x][rand_y])) {
-                tabla[rand_x][rand_y] = true;
+        int cantMinas = rand.nextInt(n*2);
+        int randX = rand.nextInt(n);
+        int randY = rand.nextInt(n);
+        for (int i = 0; i < cantMinas; i++){
+            if (!(tabla[randX][randY])) {
+                tabla[randX][randY] = true;
             }
             else {
-                rand_x = rand.nextInt(n);
-                rand_y = rand.nextInt(n);
+                randX = rand.nextInt(n);
+                randY = rand.nextInt(n);
                 i--;
             }
         }
     }
 
-    public void escoger_casilla(int pos_x, int pos_y){
-        while (pos_x >= tamano || pos_y >= tamano){
+    public void escogerCasilla(int posX, int posY){
+        while (posX >= tamano || posY >= tamano){
             logger.info("Ingresa coordenadas validas: ");
-            Scanner val_xn= new Scanner(System.in);
-            Scanner val_yn= new Scanner(System.in);
-            pos_x = val_xn.nextInt();
-            pos_y = val_yn.nextInt();
+            Scanner valxn= new Scanner(System.in);
+            Scanner valyn= new Scanner(System.in);
+            posX = valxn.nextInt();
+            posY = valyn.nextInt();
         }
-        if (tablaminada[pos_x][pos_y]){
+        if (tablaminada[posX][posY]){
             stadojugador=true;
             logger.info("Posicion seleccionada minada, usted perdio");
         }
