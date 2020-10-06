@@ -1,3 +1,5 @@
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -10,7 +12,7 @@ public class buscaminas {
     public static int tamano;
     public boolean stadojugador=false;
 
-    public buscaminas(int tam){
+    public buscaminas(int tam) throws NoSuchAlgorithmException {
         tamano =tam;
         tablaminada = new boolean[tam][tam];
         vistapantalla = new boolean[tam][tam];
@@ -20,11 +22,11 @@ public class buscaminas {
                 vistapantalla[i][j]=false;
             }
         }
-        set_minas(tablaminada,tam);
+        Random rand = SecureRandom.getInstanceStrong();
+        set_minas(tablaminada,tam, rand);
     }
 
-    public static void set_minas(boolean[][] tabla, int n){
-        Random rand = new Random();
+    public static void set_minas(boolean[][] tabla, int n, Random rand){
         int cant_minas = rand.nextInt(n*2);
         int rand_x = rand.nextInt(n);
         int rand_y = rand.nextInt(n);
