@@ -1,19 +1,21 @@
+package cs.lab;
+
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class buscaminas {
+public class Buscaminas {
 
-    static final Logger logger = Logger.getLogger(buscaminas.class.getName());
-    public static boolean [][] tablaminada;
-    public boolean [][] vistapantalla;
-    public static int tamano;
+    static final Logger logger = Logger.getLogger(Buscaminas.class.getName());
+    static boolean [][] tablaminada;
+    boolean [][] vistapantalla;
+    static int tamano;
     public boolean stadojugador=false;
 
-    public buscaminas(int tam) throws NoSuchAlgorithmException {
-        tamano =tam;
+    public Buscaminas(int tam) throws NoSuchAlgorithmException {
+        tamano = tam;
         tablaminada = new boolean[tam][tam];
         vistapantalla = new boolean[tam][tam];
         for (int i = 0; i < tam; i++){

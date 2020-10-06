@@ -1,3 +1,4 @@
+import cs.lab.Buscaminas;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.Random;
@@ -7,7 +8,7 @@ public class BuscaminasTest {
     @Test
     public void testcaseprueba() throws Exception{
         int size=3;
-        buscaminas prueba=new buscaminas(size);
+        Buscaminas prueba=new Buscaminas(size);
         while (!prueba.stadojugador){
             Random rand = new Random();
             int rand_x=rand.nextInt(size);
@@ -20,7 +21,7 @@ public class BuscaminasTest {
     public void testTime() throws Exception {
         long startTime = System.currentTimeMillis();
         int size=3;
-        buscaminas prueba=new buscaminas(size);
+        Buscaminas prueba=new Buscaminas(size);
         while (!prueba.stadojugador){
             Random rand = new Random();
             int rand_x=rand.nextInt(size);
