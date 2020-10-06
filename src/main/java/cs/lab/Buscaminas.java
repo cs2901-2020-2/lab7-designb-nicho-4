@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 public class Buscaminas {
 
     static final Logger logger = Logger.getLogger(Buscaminas.class.getName());
-    static boolean [][] tablaminada;
+    boolean [][] tablaminada;
     boolean [][] vistapantalla;
     static int tamano;
     public boolean stadojugador=false;
@@ -25,10 +25,10 @@ public class Buscaminas {
             }
         }
         Random rand = SecureRandom.getInstanceStrong();
-        set_minas(tablaminada,tam, rand);
+        setMinas(tablaminada,tam, rand);
     }
 
-    public static void set_minas(boolean[][] tabla, int n, Random rand){
+    public static void setMinas(boolean[][] tabla, int n, Random rand){
         int cantMinas = rand.nextInt(n*2);
         int randX = rand.nextInt(n);
         int randY = rand.nextInt(n);
